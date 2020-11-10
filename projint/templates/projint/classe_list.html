@@ -1,0 +1,13 @@
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+	<div class="content">
+		<div class="content-classe-list">
+			<h2>Listagem de Classes</h2>
+			{% for classe in classes %}
+					<h3><a href="{% url 'classe_detail' pk=classe.pk %}">
+					{{ classe.nome}}</a></h3>
+					<p>{{ classe.descricao}}</p>
+			{% endfor %}
+		</div>
+{% endblock %}

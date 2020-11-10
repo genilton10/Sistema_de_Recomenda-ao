@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<title>TutsUP - Layout Responsivo</title>
+		<style> </style>
+		</head>
+	<body>
+		<div class="main">
+			<header>
+                <ul>
+                    <h1>Sistema de Recomendações: Utilização de Técnica de
+                    Naive Bayes e Processamento de Linguagem Natural (PLN)</h1>
+                </ul>
+			</header>
+            {% block dinamico %}
+            
+			{% endblock %}
+			</div>
+			<div class="sidebar">
+				<ul>
+					<li> <a href="{% url 'index' %}"> Home</a> </li>
+                    <li> <a href="{% url 'accuracy' %}"> Accuracy</a> </li>
+                    <li> <a href="{% url 'aplic_stemmer' %}">Stemmer</a> </li>
+                    <li> <a href="{% url 'busc_palavras' %}">Palavras</a> </li>
+                    <li> <a href="{% url 'busc_palavras_unicas' %}">Palavras Unicas</a> </li>
+                    <li> <a href="{% url 'busc_frequencia' %}">Frequencia</a> </li>
+					<li> <a href="{% url 'matriz_confusao' %}">Matriz de Confusão</a> </li>
+					<li> <a href="{% url 'classe_list' %}">Listar Classe</a> </li>
+					<li> <a href="{% url 'classe_new' %}">Add Classe</a> </li>
+				</ul>
+			</div>
+			<br style="clear:both">
+			<div class="footer">
+                <h1>Projeto integrador III</h1>
+			</div>
+		</div>
+	</body>
+</html>

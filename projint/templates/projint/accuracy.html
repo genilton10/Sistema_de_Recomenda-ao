@@ -1,0 +1,9 @@
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+    <div class="content">
+        <div class="content-inner-accuracy">
+            <P>{% csrf_token %}
+            <h3>{{ message }}</h3></P>
+        </div>
+{% endblock %}

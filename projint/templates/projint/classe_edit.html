@@ -1,0 +1,15 @@
+
+{% extends 'projint/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block dinamico %}
+	<div class="content">
+		<div class="content-classe-list">
+			<h2>Pagina de Edição</h2>
+			<form method="POST" enctype="multpart/form-data">{% csrf_token %}
+				{{ form|crispy}}
+				<button type="submit" class="btn btn-success">gravar</button>
+			</form>
+		</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+    <div class="content">
+        <div class="content-inner-home">
+            <form method="POST">
+                {% csrf_token %}
+                <label for="area">Diga-me, o que Procura? Que Lhes Mostrarei um Caminho.</label><br>
+                <input id="area" type="text" name="area" required />
+                <input type="submit" value="processar"/>
+            </form>
+                {% if messages == 'game' %}
+                    <p>É provável que se interressa por {{messages}}</p>
+                    <h3><a href="{% url 'classe_detail' pk=1 %}">Recomendação</a></h3>
+                {% endif %}
+                {% if messages == 'edition' %}
+                <p>É provável que sua paixão seja <p>{{messages}}</p>
+                    <h3><a href="{% url 'classe_detail' pk=2 %}">Recomendação</a></h3>
+                {% endif %}
+                {% if messages == 'homeOffice' %}
+                <p>O que acha de <p>{{messages}}</p>
+                    <h3><a href="{% url 'classe_detail' pk=3 %}">Recomendação</a></h3>
+                {% endif %}
+                {% if messages == 'media' %}
+                <p>È provável que goste de <p>{{messages}}</p>
+                    <h3><a href="{% url 'classe_detail' pk=4 %}">Recomendação</a></h3>
+                {% endif %}
+                {% if messages == 'development' %}
+                    <p>{{messages}}! É isso Dev?</p>
+                    <h3><a href="{% url 'classe_detail' pk=5 %}">Recomendação</a></h3>
+                {% endif %}
+        </div>
+{% endblock %}

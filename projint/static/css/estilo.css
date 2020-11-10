@@ -1,0 +1,87 @@
+body, html{
+    margin:0;
+    padding:0;
+}
+.main{
+    max-width:80%;
+    margin:0 auto;
+    overflow:hidden;
+    background: rgb(223, 220, 220);
+}
+.content{
+    float:left;
+    width:100%;
+    margin-right:-210px;
+}
+.content-inner{
+    margin-right:210px;
+    text-align: justify;
+    min-height: 450px;
+    padding: 20px;
+}
+.content-inner-accuracy{
+    margin-right:210px;
+    text-align: center;
+    min-height: 450px;
+    padding: 20px;
+}
+.content-inner-home {
+    margin-right:210px;
+    text-align: center;
+    min-height: 450px;
+    padding: 20px;
+}
+.content-classe-list {
+    margin-right:210px;
+    margin-left: 20px;
+    text-align: inherit;
+    min-height: 450px;
+    padding: 20px;
+}
+.content-inner-home form {
+    padding: 10px;
+}
+.sidebar{
+    background:rgb(223, 220, 220);
+    float:right;
+    width:200px;
+    padding: 20px;
+}
+header {
+    width:100%;
+    background:blue;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+.sidebar ul{
+    margin:0; 
+    padding:0;
+}
+.footer{
+    width:100%;
+    background:blue;
+    text-align:center;
+    color: #fff;
+    padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar, .content-inner, .content-classe-list, .row, .content{
+        float: none;
+        width: 100%;
+        margin-right:0;
+        text-align: center;
+    }
+}
+/* login */
+
+.auth-card {
+    margin-bottom: 30px;
+}
+.row {
+    margin-left: 20px;
+    text-align: inherit;
+    align-items: center;
+    padding: 20px;
+}

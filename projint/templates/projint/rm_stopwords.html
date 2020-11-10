@@ -1,0 +1,23 @@
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="page-header">
+					<h2>Class List</h2>
+				</div>
+				<div class="list">
+					{% for questao in questoes %}
+						{{questao}}</a></h3>
+					{% endfor %}
+				</div>	
+			</div>
+			<div class="col-md-2">
+				<div class="page-header">
+					<h2><a href="{% url 'classe_new' %}">New Class</a></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

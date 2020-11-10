@@ -1,0 +1,10 @@
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+    <div class="content">
+        <div class="content-inner">
+			{% for questoescomstemmingtreinamento in questoescomstemmingtreinamentos %}
+				{{questoescomstemmingtreinamento}}</a></h3>
+			{% endfor %}
+        </div>
+{% endblock %}

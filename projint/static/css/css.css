@@ -1,0 +1,111 @@
+body, ul,li,p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+.header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+.menu {
+    display: flex;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+.menu li {
+     margin-left: 05px;
+}
+.menu li a {
+    display: block;
+    padding: 2px;
+    color: white;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+.contato {
+    display: flex;
+    font-size: 20px;
+}
+.contato li {
+    margin-left: 2px;
+
+}
+.contato li h3 {
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.contato li p {
+    font-size: 16px;
+    color: white;
+}
+h5 h3 h2 {
+    color: white;
+}
+form {
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+}
+.detalhe {
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+.detalhe ul li {
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 10px;
+}
+.link {
+    display: flex;
+}
+.link a {
+    color: orangered;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.page-header {
+    display: flex;
+}
+.page-header h2 {
+    color: black;
+    text-align: center;
+}
+.page-header h2 a {
+    color: black;
+}
+
+.container {
+    width: 90%;
+    overflow: hidden;
+    background: skyblue;
+    margin: 15px auto;
+    padding: 05px;
+    min-height: 450px;
+}
+.list {
+    color: black;
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 50px;
+}

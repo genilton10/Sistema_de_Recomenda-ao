@@ -1,0 +1,20 @@
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+	<div class="content">
+		<div class="content-classe-list">
+			<h2>Detalhe da Classe</h2>
+			<a href="{% url 'classe_edit' pk=classe.pk %}">Editar</a>
+			<a href="{% url 'classe_remove' pk=classe.pk %}">Deletar</a>
+			{% if classe.nome %}
+			<ul>
+				<li>Nome: {{ classe.nome }}</li>
+				<li>Descrição: {{ classe.descricao}}</li>
+				<li>Detalhe: {{ classe.detalhe}}</li>
+			</ul>
+			<ul>
+				<li> <a href="{% url 'index' %}">Voltar</a> </li>
+			</ul>
+			{% endif %}
+		</div>
+{% endblock %}
