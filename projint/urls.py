@@ -14,10 +14,14 @@ urlpatterns = [
     #Metrica
     path('matriz', views.matriz_confusao, name='matriz_confusao'),
     path('accuracy', views.accuracy, name='accuracy'),
+    path('avaliacao', views.avaliacao, name='avaliacao'),
+    
+
 
    	#Classe
    	path('classe', views.classe_list, name='classe_list'),
     path('classe/<int:pk>/', views.classe_detail, name='classe_detail'),
+    path('recomendacao/<int:pk>/', views.recomendacao_detail, name='recomendacao_detail'),
     path('classe/new', views.classe_new, name='classe_new'),
     path('classe/<int:pk>/edit/', views.classe_edit, name='classe_edit'),
    	path('classe/<pk>/remove/', views.classe_remove, name='classe_remove'),

@@ -1,0 +1,19 @@
+
+
+{% extends 'projint/base.html' %}
+{% block dinamico %}
+	<div class="content">
+		<div class="content-classe-list">
+			<h2>Detalhe da Recomendação</h2>
+			{% if classe.nome %}
+			<ul>
+				<li>Classe: {{ classe.nome }}</li>
+				<li>Descrição: {{ classe.descricao}}</li>
+				<li>Detalhe: {{ classe.detalhe}}</li>
+			</ul>
+			<ul>
+                <li> <a href="{% url 'index' %}">Voltar</a> </li>
+			</ul>
+			{% endif %}
+		</div>
+{% endblock %}

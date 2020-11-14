@@ -653,7 +653,7 @@ for (questao, classe) in basecompletateste:
 # ***********Metrica: Matriz de Confusão**************
 @login_required
 def matriz_confusao(request):
-	messages = ''
+	messages =''
 	from nltk.metrics import ConfusionMatrix
 	esperado = []
 	previsto = []
@@ -695,6 +695,9 @@ def index (request):
 	context = {'messages': messages}
 	return render(request, 'projint/form.html', context)
 
+def avaliacao (request):
+	context_avaliacao = extratorpalavras(context)
+	return render(request, 'projint/avaliacao.html', context_avaliacao)
 
 #**************View do administrador********************
 
@@ -716,6 +719,10 @@ def classe_list(request):
 def classe_detail(request, pk):
 	classe = get_object_or_404(Classe, pk=pk)
 	return render(request, 'projint/classe_detail.html', {'classe':classe})
+
+def recomendacao_detail(request, pk):
+	classe = get_object_or_404(Classe, pk=pk)
+	return render(request, 'projint/recomendacao.html', {'classe':classe})
 
 #*******************Add classe************************
 @login_required
